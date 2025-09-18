@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow admin area (development only)
+Disallow: /admin
+
+# Disallow checkout process (sensitive user data)
+Disallow: /checkout
+Disallow: /cart
+
+# Allow product pages and categories
+Allow: /products
+Allow: /product/*
+
+# Sitemaps
+Sitemap: https://devmobile.com/sitemap.xml
+
+# Crawl-delay for politeness (1 second)
+Crawl-delay: 1

@@ -1,0 +1,524 @@
+[
+  {
+    "id": "ip16-pro-max-001",
+    "slug": "iphone-16-pro-max",
+    "title": "iPhone 16 Pro Max",
+    "brand": "Apple",
+    "category": "phones",
+    "description": "The iPhone 16 Pro Max is the most advanced iPhone ever. Built with Grade 5 titanium and powered by the A18 Pro chip, it features Camera Control, advanced photography capabilities, and the largest iPhone display.",
+    "price": 1199,
+    "compareAtPrice": 1299,
+    "rating": 4.8,
+    "inStock": true,
+    "badges": ["Flagship", "Titanium"],
+    "colors": [
+      {
+        "name": "Natural Titanium",
+        "hex": "#8E8D89",
+        "images": [
+          "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1695048133150-7e8c4c7d5b8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Desert Titanium",
+        "hex": "#D2B48C",
+        "images": [
+          "https://images.unsplash.com/photo-1695048133158-9b2c5d6e8f4a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1695048133165-1a3b4c5d6e7f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "White Titanium",
+        "hex": "#F7F4F0",
+        "images": [
+          "https://images.unsplash.com/photo-1695048133172-2b4c5d6e8f7a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1695048133179-3a5b4c6d7e8f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Black Titanium",
+        "hex": "#1C1C1E",
+        "images": [
+          "https://images.unsplash.com/photo-1695048133186-4a6b5c7d8e9f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1695048133193-5b7c6d8e9f2a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1695048133150-7e8c4c7d5b8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Display": "6.9\" Super Retina XDR OLED",
+      "Processor": "A18 Pro chip with 6-core GPU",
+      "Camera": "48MP Fusion + 48MP Ultra Wide + 12MP Telephoto",
+      "Zoom": "5x optical zoom, Camera Control",
+      "Battery": "Up to 33 hours video playback",
+      "Connectivity": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Storage": "256GB, 512GB, 1TB"
+    },
+    "variants": [
+      { "storage": "256GB", "color": "Natural Titanium", "sku": "IP16PM-256-NT" },
+      { "storage": "512GB", "color": "Natural Titanium", "sku": "IP16PM-512-NT" },
+      { "storage": "1TB", "color": "Natural Titanium", "sku": "IP16PM-1TB-NT" },
+      { "storage": "256GB", "color": "Desert Titanium", "sku": "IP16PM-256-DT" },
+      { "storage": "512GB", "color": "Desert Titanium", "sku": "IP16PM-512-DT" },
+      { "storage": "1TB", "color": "Desert Titanium", "sku": "IP16PM-1TB-DT" },
+      { "storage": "256GB", "color": "White Titanium", "sku": "IP16PM-256-WT" },
+      { "storage": "512GB", "color": "White Titanium", "sku": "IP16PM-512-WT" },
+      { "storage": "1TB", "color": "White Titanium", "sku": "IP16PM-1TB-WT" },
+      { "storage": "256GB", "color": "Black Titanium", "sku": "IP16PM-256-BK" },
+      { "storage": "512GB", "color": "Black Titanium", "sku": "IP16PM-512-BK" },
+      { "storage": "1TB", "color": "Black Titanium", "sku": "IP16PM-1TB-BK" }
+    ]
+  },
+  {
+    "id": "ip16-pro-001",
+    "slug": "iphone-16-pro",
+    "title": "iPhone 16 Pro",
+    "brand": "Apple",
+    "category": "phones",
+    "description": "The iPhone 16 Pro features Camera Control, the A18 Pro chip, and a stunning titanium design. With advanced photography capabilities and the Dynamic Island, it's built for professionals.",
+    "price": 999,
+    "compareAtPrice": 1099,
+    "rating": 4.7,
+    "inStock": true,
+    "badges": ["Dynamic Island"],
+    "colors": [
+      {
+        "name": "Natural Titanium",
+        "hex": "#8E8D89",
+        "images": [
+          "https://images.unsplash.com/photo-1678714820187-b7e4c5af8b2e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1678714820180-9c5f7b3d4e8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Desert Titanium",
+        "hex": "#D2B48C",
+        "images": [
+          "https://images.unsplash.com/photo-1678714820173-2d4c7e9b5f6a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1678714820166-8a3b2c4d7e9f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "White Titanium",
+        "hex": "#F7F4F0",
+        "images": [
+          "https://images.unsplash.com/photo-1678714820159-1a2b3c4d5e6f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1678714820152-9a8b7c6d4e2f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Black Titanium",
+        "hex": "#1C1C1E",
+        "images": [
+          "https://images.unsplash.com/photo-1678714820145-7a8b9c6d5e4f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1678714820138-2a3b4c5d6e7f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1678714820187-b7e4c5af8b2e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1678714820180-9c5f7b3d4e8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Display": "6.3\" Super Retina XDR OLED",
+      "Processor": "A18 Pro chip",
+      "Camera": "48MP Fusion + 48MP Ultra Wide + 12MP Telephoto",
+      "Zoom": "3x optical zoom, Camera Control",
+      "Battery": "Up to 27 hours video playback",
+      "Connectivity": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Storage": "128GB, 256GB, 512GB, 1TB"
+    }
+  },
+  {
+    "id": "gs24-ultra-001",
+    "slug": "samsung-galaxy-s24-ultra",
+    "title": "Samsung Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "category": "phones",
+    "description": "The Galaxy S24 Ultra is Samsung's most advanced smartphone yet. With its integrated S Pen, 200MP camera system, and AI-powered features, it's designed for productivity and creativity.",
+    "price": 1299,
+    "compareAtPrice": 1399,
+    "rating": 4.6,
+    "inStock": true,
+    "badges": ["S Pen", "AI Features", "200MP Camera"],
+    "colors": [
+      {
+        "name": "Titanium Black",
+        "hex": "#1C1C1E",
+        "images": [
+          "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1610945264803-c22d4d52e7c1?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Titanium Gray",
+        "hex": "#6B6B6D",
+        "images": [
+          "https://images.unsplash.com/photo-1610945264798-7a3c1b2e5f4d?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1610945264792-3e2b8c7f6a9e?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Titanium Violet",
+        "hex": "#7B68A6",
+        "images": [
+          "https://images.unsplash.com/photo-1610945264786-2a1b4c5d6e8f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1610945264780-9c8d7e6f4a2b?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Titanium Yellow",
+        "hex": "#F4E04D",
+        "images": [
+          "https://images.unsplash.com/photo-1610945264774-3b2c5d7e8f1a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1610945264768-8a9b4c6d5e2f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1610945264803-c22d4d52e7c1?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Display": "6.8\" Dynamic AMOLED 2X",
+      "Processor": "Snapdragon 8 Gen 3 for Galaxy",
+      "Camera": "200MP Main + 50MP Periscope + 10MP Telephoto + 12MP Ultra Wide",
+      "Zoom": "5x optical zoom, up to 100x Space Zoom",
+      "Battery": "5000mAh with 45W fast charging",
+      "Connectivity": "5G, Wi-Fi 7, Bluetooth 5.3",
+      "Storage": "256GB, 512GB, 1TB"
+    }
+  },
+  {
+    "id": "gs23-001",
+    "slug": "samsung-galaxy-s23",
+    "title": "Samsung Galaxy S23",
+    "brand": "Samsung",
+    "category": "phones",
+    "description": "The Galaxy S23 delivers flagship performance in a compact design. With its enhanced camera system and all-day battery life, it's perfect for everyday use.",
+    "price": 799,
+    "compareAtPrice": 899,
+    "rating": 4.5,
+    "inStock": true,
+    "badges": ["Compact Flagship"],
+    "colors": [
+      {
+        "name": "Phantom Black",
+        "hex": "#1C1C1E",
+        "images": [
+          "https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1605787020594-2b3c4c5d6e8f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Cream",
+        "hex": "#F5F1E8",
+        "images": [
+          "https://images.unsplash.com/photo-1605787020588-3a2c5b7e9c4d?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1605787020582-8b9c4d6e7f2a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Green",
+        "hex": "#9BB469",
+        "images": [
+          "https://images.unsplash.com/photo-1605787020576-4c8d5e6f7b3a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1605787020570-9b2c3d4e5f6a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Lavender",
+        "hex": "#C4A4CB",
+        "images": [
+          "https://images.unsplash.com/photo-1605787020564-7b8c3d5e6f9a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1605787020558-2a3b4c5d6e7f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1605787020594-2b3c4c5d6e8f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Display": "6.1\" Dynamic AMOLED 2X",
+      "Processor": "Snapdragon 8 Gen 2 for Galaxy",
+      "Camera": "50MP Main + 10MP Telephoto + 12MP Ultra Wide",
+      "Zoom": "3x optical zoom, up to 30x Space Zoom",
+      "Battery": "3900mAh with 25W fast charging",
+      "Connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3",
+      "Storage": "128GB, 256GB, 512GB"
+    }
+  },
+  {
+    "id": "ap2-usbc-001",
+    "slug": "airpods-pro-2nd-gen-usb-c",
+    "title": "AirPods Pro (2nd generation) with USB-C",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "AirPods Pro (2nd generation) feature up to 2x more Active Noise Cancellation, plus Adaptive Transparency, and Personalized Spatial Audio with dynamic head tracking for immersive sound.",
+    "price": 249,
+    "rating": 4.8,
+    "inStock": true,
+    "badges": ["Best Seller", "USB-C"],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "images": [
+          "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1606220945770-b5b6c2c4b686?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c4b686?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Chip": "Apple H2",
+      "Active Noise Cancellation": "Up to 2x more than first generation",
+      "Battery Life": "Up to 6 hours listening time (30 hours with case)",
+      "Charging": "USB-C, MagSafe, Qi wireless charging",
+      "Water Resistance": "IPX4 sweat and water resistant"
+    }
+  },
+  {
+    "id": "am-space-gray-001",
+    "slug": "airpods-max-space-gray",
+    "title": "AirPods Max",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "AirPods Max deliver stunningly detailed, high-fidelity audio for an unparalleled listening experience. Each part of the custom-built driver works to produce sound with ultra-low distortion across the audible range.",
+    "price": 549,
+    "rating": 4.6,
+    "inStock": true,
+    "badges": ["Premium Audio"],
+    "colors": [
+      {
+        "name": "Space Gray",
+        "hex": "#5B5B5D",
+        "images": [
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Silver",
+        "hex": "#E3E4E6",
+        "images": [
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Sky Blue",
+        "hex": "#B8D4E3",
+        "images": [
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Pink",
+        "hex": "#F2C2C2",
+        "images": [
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Green",
+        "hex": "#9BB469",
+        "images": [
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Driver": "Custom-built 40mm dynamic driver",
+      "Active Noise Cancellation": "Computational audio with H1 chip",
+      "Battery Life": "Up to 20 hours of listening time",
+      "Connectivity": "Bluetooth 5.0",
+      "Audio": "Spatial Audio with dynamic head tracking"
+    }
+  },
+  {
+    "id": "gb3-buds-001",
+    "slug": "samsung-galaxy-buds3",
+    "title": "Samsung Galaxy Buds3",
+    "brand": "Samsung",
+    "category": "accessories",
+    "description": "Galaxy Buds3 deliver premium sound quality with intelligent ANC and a comfortable open-type design. Experience enhanced calls and seamless connectivity across all your Galaxy devices.",
+    "price": 179,
+    "rating": 4.4,
+    "inStock": true,
+    "badges": ["Open Design"],
+    "colors": [
+      {
+        "name": "Silver",
+        "hex": "#E3E4E6",
+        "images": [
+          "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1606220945770-b5b6c2c4b686?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "images": [
+          "https://images.unsplash.com/photo-1606220945770-b5b6c2c4b686?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c4b686?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Design": "Open-type for natural sound",
+      "Active Noise Cancellation": "Intelligent ANC",
+      "Battery Life": "Up to 6 hours (24 hours with case)",
+      "Connectivity": "Bluetooth 5.4, Galaxy seamless connection",
+      "Water Resistance": "IP57 rated"
+    }
+  },
+  {
+    "id": "icase-15pm-001",
+    "slug": "iphone-15-pro-max-silicone-case",
+    "title": "iPhone 15 Pro Max Silicone Case",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "Designed by Apple to complement iPhone 15 Pro Max, the Silicone Case is a delightful way to protect your iPhone. The silky, soft-touch finish feels great in your hand.",
+    "price": 49,
+    "rating": 4.3,
+    "inStock": true,
+    "badges": ["MagSafe Compatible"],
+    "colors": [
+      {
+        "name": "Storm Blue",
+        "hex": "#4F6D8E",
+        "images": [
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Orange Sorbet",
+        "hex": "#FF8C42",
+        "images": [
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Winter Blue",
+        "hex": "#B8D4E3",
+        "images": [
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "Black",
+        "hex": "#1C1C1E",
+        "images": [
+          "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1609592806580-70c0b135f4c4?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Material": "Silicone with soft microfiber lining",
+      "Compatibility": "iPhone 15 Pro Max",
+      "MagSafe": "Built-in magnets for MagSafe accessories",
+      "Protection": "Protects against scratches and drops"
+    }
+  },
+  {
+    "id": "anker-765-001",
+    "slug": "anker-powercore-10k-wireless",
+    "title": "Anker PowerCore 10K Wireless",
+    "brand": "Anker",
+    "category": "accessories",
+    "description": "The PowerCore 10K Wireless is the high-capacity wireless power bank that provides convenient wireless charging for your devices while on the go.",
+    "price": 89,
+    "rating": 4.5,
+    "inStock": true,
+    "badges": ["Wireless Charging", "Fast Charge"],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#1C1C1E",
+        "images": [
+          "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Capacity": "10,000mAh",
+      "Wireless Output": "10W max",
+      "Wired Output": "18W USB-C PD",
+      "Recharge Time": "4 hours with 18W charger",
+      "Dimensions": "6.2 × 2.7 × 0.7 in"
+    }
+  },
+  {
+    "id": "apple-20w-001",
+    "slug": "apple-20w-usb-c-power-adapter",
+    "title": "Apple 20W USB-C Power Adapter",
+    "brand": "Apple",
+    "category": "accessories",
+    "description": "The Apple 20W USB‑C Power Adapter offers fast, efficient charging at home, in the office, or on the go. Perfect for iPhone, iPad, and other USB‑C devices.",
+    "price": 19,
+    "rating": 4.7,
+    "inStock": true,
+    "badges": ["Fast Charging"],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+          "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+        ]
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+    ],
+    "specs": {
+      "Output": "20W USB-C Power Delivery",
+      "Compatibility": "iPhone 8 and later, iPad Pro, iPad Air",
+      "Cable": "USB-C to Lightning cable sold separately",
+      "Safety": "Built-in safeguards against overcharging"
+    }
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "name": "Dev Mobile - Premium Phones & Accessories",
+  "short_name": "Dev Mobile",
+  "description": "Discover flagship smartphones, premium accessories, and tech gear with expert support and free shipping.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#5b68ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["shopping", "lifestyle", "productivity"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Dev Mobile on mobile"
+    },
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dev Mobile on desktop"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Phones",
+      "short_name": "Phones",
+      "description": "Browse our latest smartphone collection",
+      "url": "/products?category=phones",
+      "icons": [
+        {
+          "src": "/images/shortcut-phones.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Browse Accessories",
+      "short_name": "Accessories",
+      "description": "Discover phone accessories and gear",
+      "url": "/products?category=accessories",
+      "icons": [
+        {
+          "src": "/images/shortcut-accessories.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "My Cart",
+      "short_name": "Cart",
+      "description": "View items in your shopping cart",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "/images/shortcut-cart.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
