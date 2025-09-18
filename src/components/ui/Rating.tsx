@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { clsx } from 'clsx';
 import { Star } from 'lucide-react';
 
-export interface RatingProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface RatingProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   value: number;
   max?: number;
   size?: 'sm' | 'md' | 'lg';

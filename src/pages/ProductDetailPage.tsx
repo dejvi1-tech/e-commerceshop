@@ -63,7 +63,6 @@ export const ProductDetailPage = () => {
         url={`/product/${product.slug}`}
         type="product"
         price={product.price}
-        compareAtPrice={product.compareAtPrice}
         availability={product.inStock ? 'in stock' : 'out of stock'}
         brand={product.brand}
         category={product.category}
@@ -125,7 +124,7 @@ export const ProductDetailPage = () => {
             <p className="mt-3 text-sm text-slate-300">{product.description}</p>
           </div>
           <div className="flex items-center gap-4">
-            <RatingStars rating={product.rating} />
+            <RatingStars rating={product.rating || 0} />
             <span className={`text-xs px-2 py-1 rounded ${product.inStock ? 'bg-green-900 text-green-300' : 'bg-red-900 text-red-300'}`}>
               {product.inStock ? 'In Stock' : 'Out of Stock'}
             </span>

@@ -9,7 +9,7 @@ export interface BreadcrumbItem {
   current?: boolean;
 }
 
-export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLNavElement> {
+export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
   items: BreadcrumbItem[];
   showHome?: boolean;
   separator?: React.ReactNode;
