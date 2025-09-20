@@ -69,8 +69,8 @@ export const AdminPage = () => {
       description: '',
       price: 0,
       inStock: true,
-      colors: [{ name: '', hex: '#000000', images: [''] }],
-      images: [''],
+      colors: [{ name: '', hex: '#000000', images: [] }],
+      images: [],
       specs: {}
     });
     setIsModalOpen(true);
@@ -117,7 +117,7 @@ export const AdminPage = () => {
 
   const addColor = () => {
     const colors = formData.colors || [];
-    updateFormField('colors', [...colors, { name: '', hex: '#000000', images: [''] }]);
+    updateFormField('colors', [...colors, { name: '', hex: '#000000', images: [] }]);
   };
 
   const removeColor = (index: number) => {
@@ -128,6 +128,68 @@ export const AdminPage = () => {
   const updateColor = (index: number, field: string, value: any) => {
     const colors = [...(formData.colors || [])];
     colors[index] = { ...colors[index], [field]: value };
+    updateFormField('colors', colors);
+  };
+
+  const handleImageUpload = (files: FileList | null) => {
+    if (!files) return;
+    const fileArray = Array.from(files);
+    const readers = fileArray.map(file => {
+      return new Promise<string>((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target?.result as string);
+        reader.readAsDataURL(file);
+      });
+    });
+    Promise.all(readers).then(dataUrls => {
+      updateFormField('images', dataUrls);
+    });
+  };
+
+  const handleColorImageUpload = (colorIndex: number, files: FileList | null) => {
+    if (!files) return;
+    const fileArray = Array.from(files);
+    const readers = fileArray.map(file => {
+      return new Promise<string>((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target?.result as string);
+        reader.readAsDataURL(file);
+      });
+    });
+    Promise.all(readers).then(dataUrls => {
+      updateColor(colorIndex, 'images', dataUrls);
+    });
+  };
+
+  const removeImage = (index: number) => {
+    const images = [...(formData.images || [])];
+    images.splice(index, 1);
+    updateFormField('images', images);
+  };
+
+  const removeColorImage = (colorIndex: number, imageIndex: number) => {
+    const colors = [...(formData.colors || [])];
+    const colorImages = [...colors[colorIndex].images];
+    colorImages.splice(imageIndex, 1);
+    colors[colorIndex].images = colorImages;
+    updateFormField('colors', colors);
+  };
+
+  const reorderImages = (dragIndex: number, hoverIndex: number) => {
+    const images = [...(formData.images || [])];
+    const draggedImage = images[dragIndex];
+    images.splice(dragIndex, 1);
+    images.splice(hoverIndex, 0, draggedImage);
+    updateFormField('images', images);
+  };
+
+  const reorderColorImages = (colorIndex: number, dragIndex: number, hoverIndex: number) => {
+    const colors = [...(formData.colors || [])];
+    const colorImages = [...colors[colorIndex].images];
+    const draggedImage = colorImages[dragIndex];
+    colorImages.splice(dragIndex, 1);
+    colorImages.splice(hoverIndex, 0, draggedImage);
+    colors[colorIndex].images = colorImages;
     updateFormField('colors', colors);
   };
 
@@ -181,11 +243,23 @@ export const AdminPage = () => {
               {products.map((product) => (
                 <tr key={product.id} className="border-t border-slate-700">
                   <td className="p-4">
-                    <img
-                      src={product.images[0]}
-                      alt={product.title}
-                      className="w-12 h-12 object-cover rounded"
-                    />
+                    <div className="relative">
+                      <img
+                        src={product.images[0]}
+                        alt={product.title}
+                        className="w-16 h-16 object-cover rounded-lg border border-slate-600 cursor-pointer hover:scale-105 transition-transform"
+                        onClick={() => {
+                          if (product.images[0]) {
+                            window.open(product.images[0], '_blank');
+                          }
+                        }}
+                      />
+                      {product.images.length > 1 && (
+                        <div className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                          {product.images.length}
+                        </div>
+                      )}
+                    </div>
                   </td>
                   <td className="p-4 font-medium">{product.title}</td>
                   <td className="p-4">{product.brand}</td>
@@ -306,6 +380,81 @@ export const AdminPage = () => {
                     />
                   </div>
 
+                  <div>
+                    <label className="block text-sm font-medium mb-3">Product Images</label>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-4">
+                      {(formData.images || []).map((image, index) => (
+                        <div
+                          key={index}
+                          className="relative group cursor-move"
+                          draggable
+                          onDragStart={(e) => {
+                            e.dataTransfer.setData('text/plain', index.toString());
+                            e.dataTransfer.effectAllowed = 'move';
+                          }}
+                          onDragOver={(e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = 'move';
+                          }}
+                          onDrop={(e) => {
+                            e.preventDefault();
+                            const dragIndex = parseInt(e.dataTransfer.getData('text/plain'));
+                            if (dragIndex !== index) {
+                              reorderImages(dragIndex, index);
+                            }
+                          }}
+                        >
+                          <div className="aspect-square rounded-lg overflow-hidden border-2 border-slate-600 hover:border-slate-500 transition-colors">
+                            <img
+                              src={image}
+                              alt={`Product ${index + 1}`}
+                              className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform"
+                              onClick={() => {
+                                // Open image in new tab for full view
+                                window.open(image, '_blank');
+                              }}
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                              <svg className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                              </svg>
+                            </div>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => removeImage(index)}
+                            className="absolute -top-2 -right-2 bg-red-600 hover:bg-red-700 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg"
+                            title="Remove image"
+                          >
+                            ×
+                          </button>
+                          <div className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                            {index + 1}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="border-2 border-dashed border-slate-600 rounded-lg p-6 text-center hover:border-slate-500 transition-colors">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={(e) => handleImageUpload(e.target.files)}
+                        className="hidden"
+                        id="product-images"
+                      />
+                      <label htmlFor="product-images" className="cursor-pointer">
+                        <div className="text-slate-400 mb-2">
+                          <svg className="w-8 h-8 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                          </svg>
+                        </div>
+                        <p className="text-sm text-slate-300">Click to upload product images</p>
+                        <p className="text-xs text-slate-500 mt-1">JPG, PNG up to 10MB each</p>
+                      </label>
+                    </div>
+                  </div>
+
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">Compare At Price</label>
@@ -345,27 +494,101 @@ export const AdminPage = () => {
                   <div>
                     <label className="block text-sm font-medium mb-2">Colors</label>
                     {(formData.colors || []).map((color, index) => (
-                      <div key={index} className="flex gap-2 mb-2">
-                        <input
-                          type="text"
-                          placeholder="Color name"
-                          value={color.name}
-                          onChange={(e) => updateColor(index, 'name', e.target.value)}
-                          className="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg"
-                        />
-                        <input
-                          type="color"
-                          value={color.hex}
-                          onChange={(e) => updateColor(index, 'hex', e.target.value)}
-                          className="w-16 h-10 bg-slate-800 border border-slate-700 rounded-lg"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => removeColor(index)}
-                          className="px-3 py-2 bg-red-600 hover:bg-red-700 rounded-lg"
-                        >
-                          Remove
-                        </button>
+                      <div key={index} className="mb-4 p-4 bg-slate-800 rounded-lg">
+                        <div className="flex gap-2 mb-2">
+                          <input
+                            type="text"
+                            placeholder="Color name"
+                            value={color.name}
+                            onChange={(e) => updateColor(index, 'name', e.target.value)}
+                            className="flex-1 px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg"
+                          />
+                          <input
+                            type="color"
+                            value={color.hex}
+                            onChange={(e) => updateColor(index, 'hex', e.target.value)}
+                            className="w-16 h-10 bg-slate-700 border border-slate-600 rounded-lg"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeColor(index)}
+                            className="px-3 py-2 bg-red-600 hover:bg-red-700 rounded-lg"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium mb-3">Color Images</label>
+                          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mb-3">
+                            {(color.images || []).map((image, imgIndex) => (
+                              <div
+                                key={imgIndex}
+                                className="relative group cursor-move"
+                                draggable
+                                onDragStart={(e) => {
+                                  e.dataTransfer.setData('text/plain', `${index}-${imgIndex}`);
+                                  e.dataTransfer.effectAllowed = 'move';
+                                }}
+                                onDragOver={(e) => {
+                                  e.preventDefault();
+                                  e.dataTransfer.dropEffect = 'move';
+                                }}
+                                onDrop={(e) => {
+                                  e.preventDefault();
+                                  const [colorIdx, dragIndex] = e.dataTransfer.getData('text/plain').split('-').map(Number);
+                                  if (colorIdx === index && dragIndex !== imgIndex) {
+                                    reorderColorImages(index, dragIndex, imgIndex);
+                                  }
+                                }}
+                              >
+                                <div className="aspect-square rounded-lg overflow-hidden border-2 border-slate-600 hover:border-slate-500 transition-colors">
+                                  <img
+                                    src={image}
+                                    alt={`Color ${color.name} ${imgIndex + 1}`}
+                                    className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform"
+                                    onClick={() => {
+                                      window.open(image, '_blank');
+                                    }}
+                                  />
+                                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                    <svg className="w-4 h-4 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                    </svg>
+                                  </div>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => removeColorImage(index, imgIndex)}
+                                  className="absolute -top-2 -right-2 bg-red-600 hover:bg-red-700 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg"
+                                  title="Remove image"
+                                >
+                                  ×
+                                </button>
+                                <div className="absolute bottom-1 left-1 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded">
+                                  {imgIndex + 1}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="border-2 border-dashed border-slate-600 rounded-lg p-4 text-center hover:border-slate-500 transition-colors">
+                            <input
+                              type="file"
+                              accept="image/*"
+                              multiple
+                              onChange={(e) => handleColorImageUpload(index, e.target.files)}
+                              className="hidden"
+                              id={`color-images-${index}`}
+                            />
+                            <label htmlFor={`color-images-${index}`} className="cursor-pointer">
+                              <div className="text-slate-400 mb-1">
+                                <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                              </div>
+                              <p className="text-xs text-slate-300">Add images for {color.name || 'this color'}</p>
+                            </label>
+                          </div>
+                        </div>
                       </div>
                     ))}
                     <button

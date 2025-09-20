@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { X, ShoppingBag, Trash2 } from 'lucide-react';
 import { useCartStore } from '../store/cartStore';
-import { products } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import { Money } from './Money';
 import { QuantityInput } from './QuantityInput';
 import { toast } from '../store/toastStore';
@@ -15,6 +15,7 @@ type CartDrawerProps = {
 };
 
 export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
+  const products = useProducts();
   const items = useCartStore((state) => state.items);
   const remove = useCartStore((state) => state.remove);
   const setQty = useCartStore((state) => state.setQty);

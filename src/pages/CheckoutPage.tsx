@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { ShieldCheck, Truck, CreditCard, ArrowLeft } from 'lucide-react';
 import { useCartStore } from '../store/cartStore';
-import { products } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import { Money } from '../components/Money';
 import { toast } from '../store/toastStore';
 
@@ -27,6 +27,7 @@ type CheckoutFormData = {
 export const CheckoutPage = () => {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState<'shipping' | 'payment' | 'review'>('shipping');
+  const products = useProducts();
 
   const items = useCartStore((state) => state.items);
   const subtotal = useCartStore((state) => state.subtotal());

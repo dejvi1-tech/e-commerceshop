@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useCartStore } from '../store/cartStore';
-import { products } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import { Money } from '../components/Money';
 import { QuantityInput } from '../components/QuantityInput';
 import { toast } from '../store/toastStore';
@@ -13,6 +13,7 @@ const shippingLabels: Record<'standard' | 'express', string> = {
 };
 
 export const CartPage = () => {
+  const products = useProducts();
   const items = useCartStore((state) => state.items);
   const remove = useCartStore((state) => state.remove);
   const setQty = useCartStore((state) => state.setQty);

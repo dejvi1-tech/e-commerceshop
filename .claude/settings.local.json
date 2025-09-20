@@ -4,7 +4,11 @@
       "Bash(npm run dev:*)",
       "Bash(npm install:*)",
       "Bash(npm run test:run:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Read(//Users/dejvi/Desktop/**)",
+      "Bash(npm start)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
