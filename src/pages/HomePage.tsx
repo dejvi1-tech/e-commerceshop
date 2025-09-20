@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Headphones, ShieldCheck, Sparkles, Truck } from 'lucide-react';
-import { products } from '../data/products';
-import { ProductCard } from '../components/ProductCard';
+import { useProducts } from '../hooks/useProducts';
+import { SimpleProductCard } from '../components/SimpleProductCard';
 import { SEO } from '../components/SEO';
 
 const featuredCollections = [
@@ -41,6 +41,7 @@ const sellingPoints = [
 ];
 
 export const HomePage = () => {
+  const products = useProducts();
   const featuredProducts = products.slice(0, 4);
   const heroPhones = products.filter((product) => product.category === 'phones').slice(0, 3);
 
@@ -89,14 +90,16 @@ export const HomePage = () => {
                 key={phone.id}
                 className="group overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/60 p-3"
               >
-                <img
-                  src={phone.images[0]}
-                  alt={`${phone.title} promotional photo`}
-                  className="h-48 w-full rounded-2xl object-cover transition duration-700 group-hover:scale-105"
-                  onError={(event) => {
-                    event.currentTarget.src = 'https://placehold.co/600x400/0f172a/94a3b8?text=Dev+Mobile';
-                  }}
-                />
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl">
+                  <img
+                    src={phone.images[0]}
+                    alt={`${phone.title} promotional photo`}
+                    className="h-48 w-full rounded-2xl object-contain p-4 transition duration-700 group-hover:scale-105"
+                    onError={(event) => {
+                      event.currentTarget.src = 'https://placehold.co/600x400/0f172a/94a3b8?text=Dev+Mobile';
+                    }}
+                  />
+                </div>
                 <figcaption className="mt-3 text-sm font-semibold text-slate-200">
                   {phone.title}
                 </figcaption>
@@ -146,7 +149,7 @@ export const HomePage = () => {
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <SimpleProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>

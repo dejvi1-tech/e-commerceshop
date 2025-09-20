@@ -24,14 +24,14 @@ export const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <Card className="flex h-full flex-col justify-between hover:border-brand-400/40 hover:shadow-brand-500/10" hover>
-      <Link to={`/product/${product.slug}`} className="group relative block overflow-hidden rounded-t-2xl">
+      <Link to={`/product/${product.slug}`} className="group relative block overflow-hidden rounded-t-2xl bg-gradient-to-br from-slate-50 to-slate-100">
         {!imageLoaded ? <Skeleton className="h-64 w-full rounded-none" /> : null}
         <img
           src={src}
           alt={`${product.title} product photo`}
           loading="lazy"
           className={clsx(
-            'h-64 w-full object-cover transition duration-700 group-hover:scale-105',
+            'h-64 w-full object-contain p-4 transition duration-700 group-hover:scale-105',
             imageLoaded ? 'opacity-100' : 'opacity-0'
           )}
           onLoad={() => setImageLoaded(true)}

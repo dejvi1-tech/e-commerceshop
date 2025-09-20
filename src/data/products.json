@@ -16,38 +16,39 @@
         "name": "Natural Titanium",
         "hex": "#8E8D89",
         "images": [
-          "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1695048133150-7e8c4c7d5b8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro-max/desert-titanium-1.jpg",
+          "/images/products/iphone-16-pro-max/natural-titanium-2.jpg"
         ]
       },
       {
         "name": "Desert Titanium",
         "hex": "#D2B48C",
         "images": [
-          "https://images.unsplash.com/photo-1695048133158-9b2c5d6e8f4a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1695048133165-1a3b4c5d6e7f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro-max/desert-titanium-1.jpg",
+          "/images/products/iphone-16-pro-max/desert-titanium-2.jpg"
         ]
       },
       {
         "name": "White Titanium",
         "hex": "#F7F4F0",
         "images": [
-          "https://images.unsplash.com/photo-1695048133172-2b4c5d6e8f7a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1695048133179-3a5b4c6d7e8f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro-max/white-titanium-1.jpg",
+          "/images/products/iphone-16-pro-max/white-titanium-2.jpg"
         ]
       },
       {
         "name": "Black Titanium",
         "hex": "#1C1C1E",
         "images": [
-          "https://images.unsplash.com/photo-1695048133186-4a6b5c7d8e9f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1695048133193-5b7c6d8e9f2a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro-max/black-titanium-1.jpg",
+          "/images/products/iphone-16-pro-max/black-titanium-2.jpg"
         ]
       }
     ],
     "images": [
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-      "https://images.unsplash.com/photo-1695048133150-7e8c4c7d5b8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+      "/images/products/iphone-16-pro-max/desert-titanium-1.jpg",
+      "/images/products/iphone-16-pro-max/white-titanium-1.jpg",
+      "/images/products/iphone-16-pro-max/black-titanium-1.jpg"
     ],
     "specs": {
       "Display": "6.9\" Super Retina XDR OLED",
@@ -90,38 +91,38 @@
         "name": "Natural Titanium",
         "hex": "#8E8D89",
         "images": [
-          "https://images.unsplash.com/photo-1678714820187-b7e4c5af8b2e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1678714820180-9c5f7b3d4e8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro/natural-titanium-1.jpg",
+          "/images/products/iphone-16-pro/natural-titanium-2.jpg"
         ]
       },
       {
         "name": "Desert Titanium",
         "hex": "#D2B48C",
         "images": [
-          "https://images.unsplash.com/photo-1678714820173-2d4c7e9b5f6a?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1678714820166-8a3b2c4d7e9f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro/desert-titanium-1.jpg",
+          "/images/products/iphone-16-pro/desert-titanium-2.jpg"
         ]
       },
       {
         "name": "White Titanium",
         "hex": "#F7F4F0",
         "images": [
-          "https://images.unsplash.com/photo-1678714820159-1a2b3c4d5e6f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1678714820152-9a8b7c6d4e2f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro/white-titanium-1.jpg",
+          "/images/products/iphone-16-pro/white-titanium-2.jpg"
         ]
       },
       {
         "name": "Black Titanium",
         "hex": "#1C1C1E",
         "images": [
-          "https://images.unsplash.com/photo-1678714820145-7a8b9c6d5e4f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-          "https://images.unsplash.com/photo-1678714820138-2a3b4c5d6e7f?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+          "/images/products/iphone-16-pro/black-titanium-1.jpg",
+          "/images/products/iphone-16-pro/black-titanium-2.jpg"
         ]
       }
     ],
     "images": [
-      "https://images.unsplash.com/photo-1678714820187-b7e4c5af8b2e?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
-      "https://images.unsplash.com/photo-1678714820180-9c5f7b3d4e8a?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
+      "/images/products/iphone-16-pro/natural-titanium-1.jpg",
+      "/images/products/iphone-16-pro/white-titanium-1.jpg"
     ],
     "specs": {
       "Display": "6.3\" Super Retina XDR OLED",

@@ -1,19 +1,21 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShieldCheck, Truck } from 'lucide-react';
-import { products, type Product } from '../data/products';
+import { type Product } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import { Money } from '../components/Money';
 import { RatingStars } from '../components/RatingStars';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { QuantityInput } from '../components/QuantityInput';
 import { AddToCartButton } from '../components/AddToCartButton';
-import { ProductCard } from '../components/ProductCard';
+import { SimpleProductCard } from '../components/SimpleProductCard';
 import { Skeleton } from '../components/Skeleton';
 import { NotFoundPage } from './NotFoundPage';
 import { SEO } from '../components/SEO';
 
 export const ProductDetailPage = () => {
   const { slug } = useParams();
+  const products = useProducts();
   const product = products.find((item) => item.slug === slug);
   const [quantity, setQuantity] = useState(1);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
@@ -79,13 +81,13 @@ export const ProductDetailPage = () => {
             ]}
           />
           <div className="overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/40 p-4">
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100">
               {!mainLoaded ? <Skeleton className="absolute inset-0" /> : null}
               {displayImage ? (
                 <img
                   src={displayImage}
                   alt={`${product.title} gallery image`}
-                  className={`aspect-square h-full w-full object-cover transition ${
+                  className={`aspect-square h-full w-full object-contain p-8 transition ${
                     mainLoaded ? 'opacity-100' : 'opacity-0'
                   }`}
                   onLoad={() => setMainLoaded(true)}
@@ -99,14 +101,14 @@ export const ProductDetailPage = () => {
                   key={image}
                   type="button"
                   onClick={() => handleSelectImage(image)}
-                  className={`overflow-hidden rounded-2xl border ${
+                  className={`overflow-hidden rounded-2xl border bg-gradient-to-br from-slate-50 to-slate-100 ${
                     selectedImage === image ? 'border-brand-400' : 'border-transparent'
                   }`}
                 >
                   <img
                     src={image}
                     alt={`${product.title} thumbnail`}
-                    className="aspect-square w-full object-cover"
+                    className="aspect-square w-full object-contain p-2"
                     onError={(event) => {
                       event.currentTarget.src =
                         'https://placehold.co/200x200/0f172a/94a3b8?text=Dev+Mobile';
@@ -228,7 +230,7 @@ export const ProductDetailPage = () => {
           <h2 className="text-2xl font-semibold text-white">You might also like</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatives.map((item) => (
-              <ProductCard key={item.id} product={item} />
+              <SimpleProductCard key={item.id} product={item} />
             ))}
           </div>
         </section>

@@ -1,18 +1,9 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { ProductCard } from '../components/ProductCard';
+import { SimpleProductCard } from '../components/SimpleProductCard';
 import { ProductFilters, type FilterState } from '../components/ProductFilters';
-import { products } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import { SEO } from '../components/SEO';
-
-const priceValues = products.map((product) => product.price);
-const priceBounds = {
-  min: Math.floor(Math.min(...priceValues) / 10) * 10,
-  max: Math.ceil(Math.max(...priceValues) / 10) * 10
-};
-
-const brands = Array.from(new Set(products.map((product) => product.brand))).sort();
-const colors = Array.from(new Set(products.flatMap((product) => product.colors.map(c => c.name)))).sort();
 
 const parseCategory = (value: string | null): FilterState['category'] => {
   if (value === 'phones' || value === 'accessories') return value;
@@ -34,6 +25,16 @@ const parseNumber = (value: string | null, fallback: number) => {
 
 export const ProductsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const products = useProducts();
+
+  const priceValues = products.map((product) => product.price);
+  const priceBounds = {
+    min: Math.floor(Math.min(...priceValues) / 10) * 10,
+    max: Math.ceil(Math.max(...priceValues) / 10) * 10
+  };
+
+  const brands = Array.from(new Set(products.map((product) => product.brand))).sort();
+  const colors = Array.from(new Set(products.flatMap((product) => product.colors.map(c => c.name)))).sort();
 
   const filters: FilterState = {
     search: searchParams.get('search') ?? '',
@@ -154,7 +155,7 @@ export const ProductsPage = () => {
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <SimpleProductCard key={product.id} product={product} />
             ))}
           </div>
         )}
